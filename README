@@ -8,7 +8,7 @@ The Mojo-esque abstraction logic of this project can be found in Resources/mojo/
 
 The current state of affairs of abstraction is: SiteMap -> Controller -> Voila
 
-Soon to be: SiteMap -> Controller + Model -> View -> Voila
+Soon to be: SiteMap -> Controller + Model + View -> Voila
 
 There is a huge need right now to further abstract the logic in the kernel to provide more diverse work flows like table view.
 
