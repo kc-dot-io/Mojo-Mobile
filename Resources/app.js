@@ -7,14 +7,14 @@
       title: 'Facebook',
       titleid: 'Facebook',
       icon: 'images/Facebook.png',
-      url: 'mojo/actions/facebook.js',
+      url: 'mojo/controllers/facebook.js',
       backgroundColor: '#fff'
     },
     {
       title: 'Twitter',
       titleid: 'Facebook',
       icon: 'images/Twitter.png',
-      url: 'mojo/actions/twitter.js',
+      url: 'mojo/controllers/twitter.js',
       backgroundColor: '#fff'
     }
   ]);
