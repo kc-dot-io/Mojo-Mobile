@@ -690,8 +690,8 @@ void MyUncaughtExceptionHandler(NSException *exception)
 		UIDevice *currentDevice = [UIDevice currentDevice];
 		NSString *currentLocaleIdentifier = [[NSLocale currentLocale] localeIdentifier];
 		NSString *currentDeviceInfo = [NSString stringWithFormat:@"%@/%@; %@; %@;",[currentDevice model],[currentDevice systemVersion],[currentDevice systemName],currentLocaleIdentifier];
-		NSString *kMojoMobileUserAgentPrefix = [NSString stringWithFormat:@"%s%s%s %s%s","Appc","eler","ator","Tita","nium"];
-		userAgent = [[NSString stringWithFormat:@"%@/%s (%@)",kMojoMobileUserAgentPrefix,TI_VERSION_STR,currentDeviceInfo] retain];
+		NSString *kMojo_MobileUserAgentPrefix = [NSString stringWithFormat:@"%s%s%s %s%s","Appc","eler","ator","Tita","nium"];
+		userAgent = [[NSString stringWithFormat:@"%@/%s (%@)",kMojo_MobileUserAgentPrefix,TI_VERSION_STR,currentDeviceInfo] retain];
 	}
 	return userAgent;
 }

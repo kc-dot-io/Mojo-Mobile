@@ -16,23 +16,23 @@
 {
 	switch (type)
 	{
-		case UIMojoMobileNativeItemInfoLight:
+		case UIMojo_MobileNativeItemInfoLight:
 		{
 			return [UIButton buttonWithType:UIButtonTypeInfoLight];
 		}
-		case UIMojoMobileNativeItemInfoDark:
+		case UIMojo_MobileNativeItemInfoDark:
 		{
 			return [UIButton buttonWithType:UIButtonTypeInfoDark];
 		}
-		case UIMojoMobileNativeItemDisclosure:
+		case UIMojo_MobileNativeItemDisclosure:
 		{
 			return [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
 		}
-		case UIMojoMobileNativeItemContactAdd:
+		case UIMojo_MobileNativeItemContactAdd:
 		{
 			return [UIButton buttonWithType:UIButtonTypeContactAdd];
 		}
-		case UIMojoMobileNativeItemSpinner:
+		case UIMojo_MobileNativeItemSpinner:
 		{
 			UIActivityIndicatorView *button = [[[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite] autorelease];
 			[button startAnimating];

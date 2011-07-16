@@ -16,7 +16,7 @@
 #import "KrollObject.h"
 #import "TiModule.h"
 
-@interface MojoMobileObject : KrollObject {
+@interface Mojo_MobileObject : KrollObject {
 @private
 	NSMutableDictionary *modules;
 	TiHost *host;
@@ -37,7 +37,7 @@
 	KrollContext *context;
 	NSDictionary *preload;
 	NSMutableDictionary *modules;
-	MojoMobileObject *_mojomobile;
+	Mojo_MobileObject *_mojo_mobile;
 	BOOL shutdown;
     BOOL evaluationError;
 	NSMutableArray *proxies;

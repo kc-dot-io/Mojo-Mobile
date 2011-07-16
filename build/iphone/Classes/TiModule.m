@@ -143,7 +143,7 @@
 		if (resultClass==nil)
 		{
 			NSLog(@"[WARN] attempted to load: %@",className);
-			@throw [NSException exceptionWithName:@"org.mojomobile.module" 
+			@throw [NSException exceptionWithName:@"org.mojo_mobile.module" 
 										   reason:[NSString stringWithFormat:@"invalid method (%@) passed to %@",name,[self class]] 
 										 userInfo:nil];
 		}

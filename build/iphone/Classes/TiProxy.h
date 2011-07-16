@@ -28,7 +28,7 @@ extern NSString * const TiExceptionInternalInconsistency;
 //Should be rare, but also useful if arguments are used improperly.
 extern NSString * const TiExceptionInternalInconsistency;
 
-//Rare exceptions to indicate a bug in the _mojomobile code (Eg, function that a subclass should have implemented)
+//Rare exceptions to indicate a bug in the _mojo_mobile code (Eg, function that a subclass should have implemented)
 extern NSString * const TiExceptionUnimplementedFunction;
 
 @class TiHost;

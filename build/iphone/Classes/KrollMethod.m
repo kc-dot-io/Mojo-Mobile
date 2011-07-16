@@ -191,7 +191,7 @@ TiValueRef KrollCallAsFunction(TiContextRef jsContext, TiObjectRef func, TiObjec
 	NSMethodSignature *methodSignature = [target methodSignatureForSelector:selector];
 	if (methodSignature==nil)
 	{
-		@throw [NSException exceptionWithName:@"org.mojomobile.kroll" reason:[NSString stringWithFormat:@"invalid method '%@'",NSStringFromSelector(selector)] userInfo:nil];
+		@throw [NSException exceptionWithName:@"org.mojo_mobile.kroll" reason:[NSString stringWithFormat:@"invalid method '%@'",NSStringFromSelector(selector)] userInfo:nil];
 	}
 	NSInvocation *invoker = [NSInvocation invocationWithMethodSignature:methodSignature];
 	

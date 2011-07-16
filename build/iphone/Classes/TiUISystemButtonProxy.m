@@ -34,12 +34,12 @@ MAKE_SYSTEM_PROP(DONE,UIBarButtonSystemItemDone);
 MAKE_SYSTEM_PROP(FLEXIBLE_SPACE,UIBarButtonSystemItemFlexibleSpace);
 MAKE_SYSTEM_PROP(FIXED_SPACE,UIBarButtonSystemItemFixedSpace);
 
-MAKE_SYSTEM_PROP(ACTIVITY,UIMojoMobileNativeItemSpinner);
-MAKE_SYSTEM_PROP(SPINNER,UIMojoMobileNativeItemSpinner);
-MAKE_SYSTEM_PROP(INFO_LIGHT,UIMojoMobileNativeItemInfoLight);
-MAKE_SYSTEM_PROP(INFO_DARK,UIMojoMobileNativeItemInfoDark);
-MAKE_SYSTEM_PROP(DISCLOSURE,UIMojoMobileNativeItemDisclosure);
-MAKE_SYSTEM_PROP(CONTACT_ADD,UIMojoMobileNativeItemContactAdd);
+MAKE_SYSTEM_PROP(ACTIVITY,UIMojo_MobileNativeItemSpinner);
+MAKE_SYSTEM_PROP(SPINNER,UIMojo_MobileNativeItemSpinner);
+MAKE_SYSTEM_PROP(INFO_LIGHT,UIMojo_MobileNativeItemInfoLight);
+MAKE_SYSTEM_PROP(INFO_DARK,UIMojo_MobileNativeItemInfoDark);
+MAKE_SYSTEM_PROP(DISCLOSURE,UIMojo_MobileNativeItemDisclosure);
+MAKE_SYSTEM_PROP(CONTACT_ADD,UIMojo_MobileNativeItemContactAdd);
 
 
 @end

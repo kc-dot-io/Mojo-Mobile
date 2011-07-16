@@ -18,7 +18,7 @@
 
 // Also note that we've had to change enumeration and class names here - this is because
 // some modules may require the use of AudioStreamer in external libraries and the
-// symbols cannot be changed on that end.  The use of common symbols in MojoMobile without
+// symbols cannot be changed on that end.  The use of common symbols in Mojo_Mobile without
 // namespaces is a recurring problem, and we can thank Objective-C for it.
 // - SPT
 

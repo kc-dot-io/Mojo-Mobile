@@ -1,18 +1,17 @@
-Welcome to your Appcelerator Titanium Mobile Project
+Welcome to Mojo Mobile.
 
-This is a blank project.  Start by editing your application's app.js to 
-make your first mobile project using Titanium.
+Mojo Mobile is built on top of the Appcelerator Titanium Mobile Project
 
+To get started with a project look in Resources/app.js
 
+The Mojo-esque abstraction logic of this project can be found in Resources/mojo/kernel.js
 
-----------------------------------
-Stuff our legal folk make us say:
+The current state of affairs of abstraction is: SiteMap -> Controller -> Voila
 
-Appcelerator, Appcelerator Titanium and associated marks and logos are 
-trademarks of Appcelerator, Inc. 
+Soon to be: SiteMap -> Controller + Model -> View -> Voila
 
-Titanium is Copyright (c) 2009-2010 by Appcelerator, Inc. All Rights Reserved.
+There is a huge need right now to further abstract the logic in the kernel to provide more diverse work flows like table view.
 
-Titanium is licensed under the Apache Public License (Version 2). Please
-see the LICENSE file for the full license.
+Currently the kernel in it's proof of concept state only supports tabbed view, but does so well on both iOS and Android.
 
+If you want to help make this project better, please send a Pull Request.

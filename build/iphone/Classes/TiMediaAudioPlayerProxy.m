@@ -253,13 +253,13 @@ MAKE_SYSTEM_PROP(STATE_PAUSED,AS_PAUSED);
         NSLog(@"[WARN] Invalid mode for audio player... setting to default.");
         newMode = kAudioSessionCategory_SoloAmbientSound;
     }
-	NSLog(@"[WARN] 'MojoMobile.Media.AudioPlayer.audioSessionMode' is deprecated; use 'MojoMobile.Media.audioSessionMode'");
+	NSLog(@"[WARN] 'Mojo_Mobile.Media.AudioPlayer.audioSessionMode' is deprecated; use 'Mojo_Mobile.Media.audioSessionMode'");
 	[[TiMediaAudioSession sharedSession] setSessionMode:newMode];
 }
 
 -(NSNumber*)audioSessionMode
 {
-	NSLog(@"[WARN] 'MojoMobile.Media.AudioPlayer.audioSessionMode' is deprecated; use 'MojoMobile.Media.audioSessionMode'");	
+	NSLog(@"[WARN] 'Mojo_Mobile.Media.AudioPlayer.audioSessionMode' is deprecated; use 'Mojo_Mobile.Media.audioSessionMode'");	
     return [NSNumber numberWithUnsignedInteger:[[TiMediaAudioSession sharedSession] sessionMode]];
 }
 

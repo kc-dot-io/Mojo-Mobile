@@ -52,7 +52,7 @@ extern "C" {
 	#define KMETHOD_DEBUG MEMORY_DEBUG
 #endif
 
-// in simulator we redefine to format for MojoMobile Developer console
+// in simulator we redefine to format for Mojo_Mobile Developer console
 
 
 #define TI_INLINE static __inline__
@@ -291,7 +291,7 @@ if ((__x<__minX) || (__x>__maxX)) \
 #define DEFINE_EXCEPTIONS \
 - (void) throwException:(NSString *) reason subreason:(NSString*)subreason location:(NSString *)location\
 {\
-	NSString * exceptionName = [@"org.mojomobile." stringByAppendingString:NSStringFromClass([self class])];\
+	NSString * exceptionName = [@"org.mojo_mobile." stringByAppendingString:NSStringFromClass([self class])];\
 	NSString * message = [NSString stringWithFormat:@"%@. %@ %@",reason,(subreason!=nil?subreason:@""),(location!=nil?location:@"")];\
 	NSLog(@"[ERROR] %@",message);\
 	if ([NSThread isMainThread]==NO) {\
@@ -301,7 +301,7 @@ if ((__x<__minX) || (__x>__maxX)) \
 \
 + (void) throwException:(NSString *) reason subreason:(NSString*)subreason location:(NSString *)location\
 {\
-	NSString * exceptionName = @"org.mojomobile";\
+	NSString * exceptionName = @"org.mojo_mobile";\
 	NSString * message = [NSString stringWithFormat:@"%@. %@ %@",reason,(subreason!=nil?subreason:@""),(location!=nil?location:@"")];\
 	NSLog(@"[ERROR] %@",message);\
 	if ([NSThread isMainThread]==NO) {\
@@ -375,28 +375,28 @@ return map;\
 
  //MUST BE NEGATIVE, as it inhabits the same space as UIBarButtonSystemItem
 enum {
-	UIMojoMobileNativeItemNone = -1, 
-	UIMojoMobileNativeItemSpinner = -2,
-	UIMojoMobileNativeItemProgressBar = -3,
+	UIMojo_MobileNativeItemNone = -1, 
+	UIMojo_MobileNativeItemSpinner = -2,
+	UIMojo_MobileNativeItemProgressBar = -3,
 	
-	UIMojoMobileNativeItemSlider = -4,
-	UIMojoMobileNativeItemSwitch = -5,
-	UIMojoMobileNativeItemMultiButton = -6,
-	UIMojoMobileNativeItemSegmented = -7,
+	UIMojo_MobileNativeItemSlider = -4,
+	UIMojo_MobileNativeItemSwitch = -5,
+	UIMojo_MobileNativeItemMultiButton = -6,
+	UIMojo_MobileNativeItemSegmented = -7,
 	
-	UIMojoMobileNativeItemTextView = -8,
-	UIMojoMobileNativeItemTextField = -9,
-	UIMojoMobileNativeItemSearchBar = -10,
+	UIMojo_MobileNativeItemTextView = -8,
+	UIMojo_MobileNativeItemTextField = -9,
+	UIMojo_MobileNativeItemSearchBar = -10,
 	
-	UIMojoMobileNativeItemPicker = -11,
-	UIMojoMobileNativeItemDatePicker = -12,
+	UIMojo_MobileNativeItemPicker = -11,
+	UIMojo_MobileNativeItemDatePicker = -12,
 	
-	UIMojoMobileNativeItemInfoLight = -13,
-	UIMojoMobileNativeItemInfoDark = -14,
+	UIMojo_MobileNativeItemInfoLight = -13,
+	UIMojo_MobileNativeItemInfoDark = -14,
 	
-	UIMojoMobileNativeItemDisclosure = -15,
+	UIMojo_MobileNativeItemDisclosure = -15,
 	
-	UIMojoMobileNativeItemContactAdd = -16
+	UIMojo_MobileNativeItemContactAdd = -16
 };
 
 

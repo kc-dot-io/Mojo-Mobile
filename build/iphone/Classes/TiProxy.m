@@ -31,7 +31,7 @@ NSString * const TiExceptionOSError = @"The iOS reported an error";
 //Should be rare, but also useful if arguments are used improperly.
 NSString * const TiExceptionInternalInconsistency = @"Value was not the value expected";
 
-//Rare exceptions to indicate a bug in the _mojomobile code (Eg, method that a subclass should have implemented)
+//Rare exceptions to indicate a bug in the _mojo_mobile code (Eg, method that a subclass should have implemented)
 NSString * const TiExceptionUnimplementedFunction = @"Subclass did not implement required method";
 
 

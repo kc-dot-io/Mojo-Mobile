@@ -206,13 +206,13 @@
         NSLog(@"[WARN] Invalid mode for audio recorder... setting to default.");
         newMode = kAudioSessionCategory_RecordAudio;
     }
-	NSLog(@"[WARN] 'MojoMobile.Media.AudioRecorder.audioSessionMode' is deprecated; use 'MojoMobile.Media.audioSessionMode'");
+	NSLog(@"[WARN] 'Mojo_Mobile.Media.AudioRecorder.audioSessionMode' is deprecated; use 'Mojo_Mobile.Media.audioSessionMode'");
 	[[TiMediaAudioSession sharedSession] setSessionMode:newMode];
 }
 
 -(NSNumber*)audioSessionMode
 {
-	NSLog(@"[WARN] 'MojoMobile.Media.AudioRecorder.audioSessionMode' is deprecated; use 'MojoMobile.Media.audioSessionMode'");	
+	NSLog(@"[WARN] 'Mojo_Mobile.Media.AudioRecorder.audioSessionMode' is deprecated; use 'Mojo_Mobile.Media.audioSessionMode'");	
     return [NSNumber numberWithUnsignedInt:[[TiMediaAudioSession sharedSession] sessionMode]];
 }
 

@@ -12,7 +12,7 @@
 
 @protocol TiKeyboardFocusableView
 
-#pragma mark Public MojoMobile APIs.
+#pragma mark Public Mojo_Mobile APIs.
 - (void)focus:(id)args;
 - (void)blur:(id)args;
 

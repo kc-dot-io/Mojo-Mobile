@@ -22,7 +22,7 @@
 			<string>com.slajax.mojo.mobile</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>mojomobile</string>
+				<string>mojo-mobile</string>
 				
 			</array>
 		</dict>
