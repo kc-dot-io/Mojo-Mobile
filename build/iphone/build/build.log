@@ -1,0 +1,79 @@
+================================================================================
+Appcelerator Titanium Diagnostics Build Log
+The contents of this file are useful to send to Appcelerator Support if
+reporting an issue to help us understand your environment, build settings
+and aid in debugging. Please attach this log to any issue that you report.
+================================================================================
+
+Starting build at 07/16/11 14:16
+
+Build details:
+
+   timestamp=06/21/11 14:28
+   version=1.7.1
+   githash=1293a6d
+
+
+Script arguments:
+   /Library/Application Support/Titanium/mobilesdk/osx/1.7.1/iphone/builder.py
+   simulator
+   4.2
+   /Users/slajax/Documents/Titanium Studio Workspace/MojoMobile
+   com.slajax.mojo.mobile
+   MojoMobile
+   universal
+   iphone
+   
+
+Building from: /Library/Application Support/Titanium/mobilesdk/osx/1.7.1/iphone
+Platform: Darwin Kernel Version 10.5.0: Fri Nov  5 23:20:39 PDT 2010; root:xnu-1504.9.17~1/RELEASE_I386
+
+Xcode path is: /Developer
+
+
+githash=1293a6d, existing_git_hash=1293a6d
+writing contents of /Users/slajax/Documents/Titanium Studio Workspace/MojoMobile/build/iphone/project.xcconfig:
+
+TI_VERSION=1.7.1
+TI_SDK_DIR=/Library/Application Support/Titanium/mobilesdk/osx/$(TI_VERSION)/iphone
+TI_APPID=com.slajax.mojo.mobile
+OTHER_LDFLAGS[sdk=iphoneos*]=$(inherited) -weak_framework iAd
+OTHER_LDFLAGS[sdk=iphonesimulator*]=$(inherited) -weak_framework iAd
+#include "module"
+
+old contents
+
+
+Generated the following stylecode code:
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>classes</key>
+		<dict>
+</dict>
+
+		<key>classes_density</key>
+		<dict>
+</dict>
+
+		<key>ids</key>
+		<dict>
+</dict>
+
+		<key>ids_density</key>
+		<dict>
+</dict>
+
+		<key>tags</key>
+		<dict>
+</dict>
+
+		<key>tags_density</key>
+		<dict>
+</dict>
+
+	</dict>
+</plist>
+Finishing build
