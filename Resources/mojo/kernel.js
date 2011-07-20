@@ -5,8 +5,7 @@
    */
   
   Mojo.Start = function()
-  {
-    
+  {    
     Titanium.UI.setBackgroundColor('#000');
     
     Mojo.root_win = Titanium.UI.createWindow({
@@ -40,6 +39,12 @@
   {
     return Mojo.UI.makeTab( options )
   };
+  
+  Mojo.Model = {};
+  
+  Mojo.Controller = {};
+  
+  Mojo.View = {};
   
   /*
    * Mojo UI
