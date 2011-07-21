@@ -53,7 +53,7 @@ for .js files with the name "facebook".
 
 ```
 
-Here you see that the exports variable defines some simple localized data for a label. We can also define a callback for this model via Mojo.Ready that defines the exports for each component of the module - once they have loaded.
+Here you see that the exports variable defines some simple localized data for a label. We can also define a callback for this model via Mojo.Ready that helps you to access the exports for each component of the module - once they have loaded.
 
 > Resources/mojo/views/facebook.js
 
