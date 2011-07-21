@@ -16,11 +16,24 @@
   };
   
   Mojo._callbacks = Object();
-  Mojo.Ready = function(name,type,callback)
+  
+  Mojo.Ready = function( /* string */ name, /* string */ type, /* function */ callback )
   {
     Ti.API.info('adding callback: '+name+'_'+type);
     
     Mojo._callbacks[name+'_'+type] = callback; 
+  };
+  
+  Mojo.Observe = function( /* string */ name, /* string */ type, /* function */ callback)
+  {
+    Ti.API.info('adding callback: '+name+'_'+type);
+    
+    Ti.App.addEventListener(name+'_'+type, callback);
+  };
+  
+  Mojo.Fire = function( /* string */ name, /* string */ type, /* object */ data )
+  {
+    Ti.App.fireEvent(name+'_'+type, data);
   };
   
   /*
@@ -74,8 +87,7 @@
     {
       controllers[ map[i].name ] = require ( 'mojo/controllers/'+map[ i ].name+'.js' );
     }      
-    
-    
+        
     Mojo.Model._models = models;
     Mojo.View._views = views;
     Mojo.Controller._controllers = controllers;

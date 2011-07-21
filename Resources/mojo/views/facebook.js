@@ -1,11 +1,4 @@
 
-  Mojo.Ready('facebook','view',function(options){
-    
-    Ti.API.info('View got these options: ');
-    Ti.API.info(options);
-    
-  });
-
   var win = Mojo.UI.makeWindow();
   
   var view = Mojo.UI.makeView({window: win}); 
@@ -20,10 +13,19 @@
   });  
   
   view.add(label);
-  
-  win.open();
-  
+   
   var exports = { view: view };
 
 
-
+  Mojo.Ready('facebook','view',function(options){
+    
+    Ti.API.info('View got these options: ');
+    Ti.API.info(options);
+  
+    win.open();
+  
+    view.addEventListener('click',function(){
+      Mojo.Fire('facebook','click',{ data: 'test' })
+    });
+    
+  });
