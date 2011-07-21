@@ -45,8 +45,8 @@ for .js files with the name "facebook".
 
   Mojo.Ready('facebook','model',function(options){
     
-    Ti.API.info('Model got these options: ');
-    Ti.API.info(options);
+    Mojo.Log('Model got these options: ');
+    Mojo.Log(options);
     
   });
 
@@ -63,8 +63,8 @@ Here you see that the exports variable defines some simple localized data for a 
 
   Mojo.Ready('facebook','view',function(options){
     
-    Ti.API.info('View got these options: ');
-    Ti.API.info(options);
+    Mojo.Log('View got these options: ');
+    Mojo.Log(options);
     
     var win = Mojo.UI.makeWindow();
     
@@ -88,8 +88,8 @@ Here you see that the exports variable defines some simple localized data for a 
     });
     
     Mojo.Observe('facebook','controller_callback',function(response){
-      Ti.API.info('Controller repsonded with: ');
-      Ti.API.info(response.data);
+      Mojo.Log('Controller repsonded with: ');
+      Mojo.Log(response.data);
     });
     
   });
@@ -107,14 +107,14 @@ In the view, you can see that we wait until the callback is invoked to build our
   
   Mojo.Ready('facebook','controller',function(options){
     
-    Ti.API.info('Sitemap is ready');
-    Ti.API.info('Controller got these options: ');
-    Ti.API.info(options);
+    Mojo.Log('Sitemap is ready');
+    Mojo.Log('Controller got these options: ');
+    Mojo.Log(options);
   
     Mojo.Observe('facebook','controller',function(options){
       
-      Ti.API.info('The Controller got these options from the view observer on click');
-      Ti.API.info(options);
+      Mojo.Log('The Controller got these options from the view observer on click');
+      Mojo.Log(options);
       
       //Do Something with the Model
       

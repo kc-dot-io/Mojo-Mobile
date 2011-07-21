@@ -100,6 +100,15 @@
   };
   
   /*
+   * Mojo Log
+   */
+  
+  Mojo.Log = function( /* anything */ msg )
+  {
+    Ti.API.info(msg);  
+  };
+  
+  /*
    * Mojo Model
    */
   
