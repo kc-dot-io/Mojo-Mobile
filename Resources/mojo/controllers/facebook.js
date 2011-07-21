@@ -1,3 +1,4 @@
+  var exports = { }; 
   
   Mojo.Ready('facebook','controller',function(options){
     
@@ -12,8 +13,7 @@
     
   });
   
-  
-  var exports = { view: 'facebook', model: 'facebook' };
+ 
   
 
 

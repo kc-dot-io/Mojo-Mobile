@@ -1,7 +1,6 @@
   
   var exports = { };
 
-
   Mojo.Ready('facebook','view',function(options){
     
     Ti.API.info('View got these options: ');
@@ -21,14 +20,11 @@
     });  
     
     view.add(label);
-    
-    
+        
     win.open();
   
     view.addEventListener('click',function(){
       Mojo.Fire('facebook','click',{ data: 'test' })
     });
-    
-    exports.view = view;
     
   });
