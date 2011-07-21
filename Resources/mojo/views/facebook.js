@@ -24,7 +24,7 @@
     win.open();
   
     view.addEventListener('click',function(){
-      Mojo.Fire('facebook','controller',{ data: { action: 'doSomething' } })
+      Mojo.Fire('facebook','controller',{ data: { action: 'doSomething' } });
     });
     
     Mojo.Observe('facebook','controller_callback',function(response){
