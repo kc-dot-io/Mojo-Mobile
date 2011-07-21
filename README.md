@@ -19,7 +19,7 @@ Here is a basic example of execution logic:
      
     Mojo.Build([
       {
-        module: 'facebook'
+        module: 'demo'
       }
     ]);    
     
@@ -33,9 +33,9 @@ This would then look inside:
 * Resources/mojo/views
 * Resources/mojo/controllers
 
-for .js files with the name "facebook". 
+for .js files with the name "demo". 
 
-> Resources/mojo/models/facebook.js
+> Resources/mojo/models/demo.js
 
 ```javascript 
 
@@ -43,7 +43,7 @@ for .js files with the name "facebook".
     i18n: { label: 'I18N: Facebook' }    
   }; 
 
-  Mojo.Ready('facebook','model',function(options){
+  Mojo.Ready('demo','model',function(options){
     
     Mojo.Log('Model got these options: ');
     Mojo.Log(options);
@@ -55,13 +55,13 @@ for .js files with the name "facebook".
 
 Here you see that the exports variable defines some simple localized data for a label. We can also define a callback for this model via Mojo.Ready that helps you to access the exports for each component of the module - once they have loaded.
 
-> Resources/mojo/views/facebook.js
+> Resources/mojo/views/demo.js
 
 ```javascript   
   
   var exports = { };
 
-  Mojo.Ready('facebook','view',function(options){
+  Mojo.Ready('demo','view',function(options){
     
     Mojo.Log('View got these options: ');
     Mojo.Log(options);
@@ -84,10 +84,10 @@ Here you see that the exports variable defines some simple localized data for a 
     win.open();
   
     view.addEventListener('click',function(){
-      Mojo.Fire('facebook','controller',{ data: { action: 'doSomething' } });
+      Mojo.Fire('demo','controller',{ data: { action: 'doSomething' } });
     });
     
-    Mojo.Observe('facebook','controller_callback',function(response){
+    Mojo.Observe('demo','controller_callback',function(response){
       Mojo.Log('Controller repsonded with: ');
       Mojo.Log(response.data);
     });
@@ -99,26 +99,26 @@ Here you see that the exports variable defines some simple localized data for a 
 
 In the view, you can see that we wait until the callback is invoked to build our interface. The reason for this is that most of the time we need access to the data scheme (options.model.data) in order to dynamically build the view. Later in the callback we add a standard click event listener which uses Mojo.Fire to send a message to the controller with some data.
 
-> Resources/mojo/controllers/facebook.js
+> Resources/mojo/controllers/demo.js
 
 ```javascript 
 
   var exports = { }; 
   
-  Mojo.Ready('facebook','controller',function(options){
+  Mojo.Ready('demo','controller',function(options){
     
     Mojo.Log('Sitemap is ready');
     Mojo.Log('Controller got these options: ');
     Mojo.Log(options);
   
-    Mojo.Observe('facebook','controller',function(options){
+    Mojo.Observe('demo','controller',function(options){
       
       Mojo.Log('The Controller got these options from the view observer on click');
       Mojo.Log(options);
       
       //Do Something with the Model
       
-      Mojo.Fire('facebook','controller_callback',{ data: 'Controller says Hi' });
+      Mojo.Fire('demo','controller_callback',{ data: 'Controller says Hi' });
     });  
     
   });
