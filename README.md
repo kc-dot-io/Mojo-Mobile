@@ -11,7 +11,7 @@ Here is a basic example of execution logic:
 
 > Resources/app.js
 
-``` 
+```javascript 
 
   (function(){
       
@@ -37,7 +37,7 @@ for .js files with the name "facebook".
 
 > Resources/mojo/models/facebook.js
 
-```
+```javascript 
 
   var exports = { 
     i18n: { label: 'I18N: Facebook' }    
@@ -57,7 +57,7 @@ Here you see that the exports variable defines some simple localized data for a 
 
 > Resources/mojo/views/facebook.js
 
-```  
+```javascript   
   
   var exports = { };
 
@@ -101,7 +101,7 @@ In the view, you can see that we wait until the callback is invoked to build our
 
 > Resources/mojo/controllers/facebook.js
 
-```
+```javascript 
 
   var exports = { }; 
   
