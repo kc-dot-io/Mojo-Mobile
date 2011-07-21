@@ -27,17 +27,17 @@
     
     for(var i=0; i<map.length; i++)
     {
-      models[ map[i].name ] = require ( 'mojo/models/'+map[ i ].name+'.js' );
+      models[ map[i].module ] = require ( 'mojo/models/'+map[ i ].module+'.js' );
     }
     
     for(var i=0; i<map.length; i++)
     {
-      views[ map[i].name ] = require ( 'mojo/views/'+map[ i ].name+'.js' );
+      views[ map[i].module ] = require ( 'mojo/views/'+map[ i ].module+'.js' );
     }
         
     for( var i=0; i<map.length; i++ )
     {
-      controllers[ map[i].name ] = require ( 'mojo/controllers/'+map[ i ].name+'.js' );
+      controllers[ map[i].module ] = require ( 'mojo/controllers/'+map[ i ].module+'.js' );
     }      
         
     Mojo.Model._models = models;

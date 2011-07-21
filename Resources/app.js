@@ -4,7 +4,7 @@
    
   Mojo.Build([
     {
-      name: 'facebook'
+      module: 'facebook'
     }
   ]);    
   
