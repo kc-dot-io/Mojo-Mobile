@@ -11,7 +11,7 @@ The benefit of this, is it allows for each component in the name space to build 
 
 Here is a basic example of execution logic:
 
-> Resource/app.js
+> Resources/app.js
 
 ``` 
 
