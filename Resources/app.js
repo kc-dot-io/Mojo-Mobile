@@ -1,10 +1,8 @@
 (function(){
     
   Ti.include('mojo/kernel.js');
-  
-  Mojo.Start();
-
-  Mojo.SiteMap.Bind([
+   
+  Mojo.Build([
     {
       name: 'facebook'
     }

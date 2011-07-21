@@ -14,7 +14,40 @@
 
     return Mojo;
   };
-  
+
+   
+  Mojo.Build = function( /*array of objects*/ map )
+  {
+        
+    Mojo.Start();
+
+    var models = Object();
+    var views = Object();    
+    var controllers = Object();
+    
+    for(var i=0; i<map.length; i++)
+    {
+      models[ map[i].name ] = require ( 'mojo/models/'+map[ i ].name+'.js' );
+    }
+    
+    for(var i=0; i<map.length; i++)
+    {
+      views[ map[i].name ] = require ( 'mojo/views/'+map[ i ].name+'.js' );
+    }
+        
+    for( var i=0; i<map.length; i++ )
+    {
+      controllers[ map[i].name ] = require ( 'mojo/controllers/'+map[ i ].name+'.js' );
+    }      
+        
+    Mojo.Model._models = models;
+    Mojo.View._views = views;
+    Mojo.Controller._controllers = controllers;
+    
+    Mojo.SiteMap.Complete();
+    
+  }; 
+    
   Mojo._callbacks = Object();
   
   Mojo.Ready = function( /* string */ name, /* string */ type, /* function */ callback )
@@ -65,36 +98,6 @@
       }
     }
   };
-   
-  Mojo.SiteMap.Bind = function( /*array of objects*/ map )
-  {    
-    
-    var models = Object();
-    var views = Object();    
-    var controllers = Object();
-    
-    for(var i=0; i<map.length; i++)
-    {
-      models[ map[i].name ] = require ( 'mojo/models/'+map[ i ].name+'.js' );
-    }
-    
-    for(var i=0; i<map.length; i++)
-    {
-      views[ map[i].name ] = require ( 'mojo/views/'+map[ i ].name+'.js' );
-    }
-        
-    for( var i=0; i<map.length; i++ )
-    {
-      controllers[ map[i].name ] = require ( 'mojo/controllers/'+map[ i ].name+'.js' );
-    }      
-        
-    Mojo.Model._models = models;
-    Mojo.View._views = views;
-    Mojo.Controller._controllers = controllers;
-    
-    this.Complete();
-    
-  }; 
   
   /*
    * Mojo Model
