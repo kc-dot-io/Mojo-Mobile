@@ -1,13 +1,13 @@
-  Ti.include('../kernel.js');
 
-  var view = Mojo.UI.makeView(); 
+Mojo.Ready('facebook','controller',function(options){
   
-  var label = Mojo.UI.makeLabel({
-    color:'#999',
-    text:'Facebook',
-    font:{fontSize:20,fontFamily:'Helvetica Neue'},
-    textAlign:'center',
-    width:'auto'
-  });  
+  Ti.API.info('Sitemap is ready');
+  Ti.API.info('Controller got these options: ');
+  Ti.API.info(options);
   
-  view.add(label);
+});
+
+var exports = { view: 'facebook', model: 'facebook' };
+
+
+
