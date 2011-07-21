@@ -38,6 +38,7 @@ This would then look inside:
 for .js files with the name "facebook". 
 
 > Resources/mojo/models/facebook.js
+
 ```
 
   var exports = { 
@@ -59,8 +60,8 @@ Here you see that the exports variable defines some simple localized data for a 
 We can also defined a callback for this model via Mojo.Ready that provides all data defined by each component of the module to this context.
 
 > Resources/mojo/views/facebook.js
-```
-  
+
+```  
   var exports = { };
 
   Mojo.Ready('facebook','view',function(options){
@@ -99,6 +100,7 @@ In the view, you can see that we wait until the callback is invoked to build our
 The reason for this is that most of the time we need access to the data scheme (options.model.data) in order to dynamically build the view.
 
 > Resources/mojo/controllers/facebook.js
+
 ```
   var exports = { }; 
   
