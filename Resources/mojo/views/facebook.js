@@ -24,7 +24,12 @@
     win.open();
   
     view.addEventListener('click',function(){
-      Mojo.Fire('facebook','click',{ data: 'test' })
+      Mojo.Fire('facebook','controller',{ data: { action: 'doSomething' } })
+    });
+    
+    Mojo.Observe('facebook','controller_callback',function(response){
+      Ti.API.info('Controller repsonded with: ');
+      Ti.API.info(response.data);
     });
     
   });

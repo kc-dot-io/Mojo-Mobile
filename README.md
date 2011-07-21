@@ -57,11 +57,12 @@ for .js files with the name "facebook".
 
 Here you see that the exports variable defines some simple localized data for a label. 
 
-We can also defined a callback for this model via Mojo.Ready that provides all data defined by each component of the module to this context.
+We can also define a callback for this model via Mojo.Ready that defines the exports for each component of the module - once they have loaded.
 
 > Resources/mojo/views/facebook.js
 
 ```  
+  
   var exports = { };
 
   Mojo.Ready('facebook','view',function(options){
@@ -87,7 +88,12 @@ We can also defined a callback for this model via Mojo.Ready that provides all d
     win.open();
   
     view.addEventListener('click',function(){
-      Mojo.Fire('facebook','click',{ data: 'test' })
+      Mojo.Fire('facebook','controller',{ data: { action: 'doSomething' } })
+    });
+    
+    Mojo.Observe('facebook','controller_callback',function(response){
+      Ti.API.info('Controller repsonded with: ');
+      Ti.API.info(response.data);
     });
     
   });
@@ -99,9 +105,12 @@ In the view, you can see that we wait until the callback is invoked to build our
 
 The reason for this is that most of the time we need access to the data scheme (options.model.data) in order to dynamically build the view.
 
+Later in the callback we add a standard click event listener which uses Mojo.Fire to send a message to the controller with some data.
+
 > Resources/mojo/controllers/facebook.js
 
 ```
+
   var exports = { }; 
   
   Mojo.Ready('facebook','controller',function(options){
@@ -110,16 +119,23 @@ The reason for this is that most of the time we need access to the data scheme (
     Ti.API.info('Controller got these options: ');
     Ti.API.info(options);
   
-    Mojo.Observe('facebook','click',function(options){
+    Mojo.Observe('facebook','controller',function(options){
+      
       Ti.API.info('The Controller got these options from the view observer on click');
       Ti.API.info(options);
+      
+      //Do Something with the Model
+      
+      Mojo.Fire('facebook','controller_callback',{ data: 'Controller says Hi' });
     });  
     
   });
-  
+   
 
 ```
 
 Lastly we have the controller. Generally the controller is the last callback to be invoked.
 
 This makes it a perfect place to use Mojo.Observe which will listen to application wide events and pass data similar to Mojo.Messaging.getTopic in Blast Mojo.
+
+Mojo.Observe can be then used to consult the data and fire information back to the view so it can update the presentation.
