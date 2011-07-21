@@ -16,7 +16,7 @@ The benefit of this, is it allows for each component in the name space to build 
 Example:
 
 
-`  (function(){
+``` (function(){
       
     Ti.include('mojo/kernel.js');
      
@@ -27,4 +27,4 @@ Example:
     ]);    
     
   })();
-`
+```
