@@ -1,5 +1,5 @@
-Welcome to Mojo Mobile.
-=======================
+Welcome to Mojo Mobile
+======================
 
 Mojo Mobile is built on top of the Appcelerator Titanium Mobile Project
 
