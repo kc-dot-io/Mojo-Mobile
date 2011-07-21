@@ -7,13 +7,6 @@
   });
   
   var exports = { 
-    data:[
-      {
-       name: 'test' 
-      },
-      {
-       name: 'test2'
-      }
-    ]
+    i18n: { label: 'I18N: Facebook' }    
   }; 
 
