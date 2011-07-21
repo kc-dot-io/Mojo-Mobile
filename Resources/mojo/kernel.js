@@ -111,6 +111,16 @@
   
   Mojo.UI = {};
   
+  Mojo.UI.makeWindow = function( /*object*/ options )
+  {
+    options = options || {};
+    
+    var win = Titanium.UI.createWindow(options);
+    
+    return win;
+    
+  };
+  
   Mojo.UI.makeTabGroup = function( /*array of objects*/ tabs )
   {
     
@@ -132,7 +142,7 @@
   
     options = options || {};
     
-    var win = Titanium.UI.createWindow(options);
+    var win = options.window || Titanium.UI.createWindow(options);
     
     options.window = win;
     
@@ -149,7 +159,9 @@
            
     var view = Titanium.UI.createView(options);
 
-    Titanium.UI.currentWindow.add(view); 
+    var win = options.window || Titanium.UI.currentWindow;
+    
+    win.add(view); 
     
     return view;
     

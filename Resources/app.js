@@ -1,6 +1,5 @@
 (function(){
-  
-  
+    
   Ti.include('mojo/kernel.js');
   
   Mojo.Start();
@@ -9,7 +8,6 @@
     {
       name: 'facebook'
     }
-  ]);
-    
+  ]);    
   
 })();
