@@ -3,7 +3,7 @@ Welcome to Mojo Mobile
 
 Mojo Mobile is built on top of the [Appcelerator Titanium Mobile Project](http://appcelerator.com) and based on [Blast Mojo](http://blastmojo.com) design mentalities.
 
-The basic design patter that Mojo follows starts with Mojo.Build. It will will invoke a model, view, and controller for each module namespace. 
+All Mojo Mobile apps start with Mojo.Build. It will will invoke a model, view, and controller for each module namespace. 
 
 Modules are designed to use the [CommonJS](http://wiki.commonjs.org/wiki/Modules/1.1) style of "var exports" to export variables to the modules global scope. Doing this allows each separate component of the module to access them.
 
