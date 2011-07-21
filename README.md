@@ -1,11 +1,7 @@
 Welcome to Mojo Mobile
 ======================
 
-Mojo Mobile is built on top of the Appcelerator Titanium Mobile Project
-
-To get started with a project look in Resources/app.js
-
-The Mojo-esque abstraction logic of this project can be found in Resources/mojo/kernel.js
+Mojo Mobile is built on top of the [Appcelerator Titanium Mobile Project](http://appcelerator.com) and based on [Blast Mojo](http://blastmojo.com) design mentalities.
 
 The basic flow is that Mojo.Build will invoke a model, view, and controller for the module namespace. 
 
