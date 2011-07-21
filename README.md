@@ -5,7 +5,7 @@ Mojo Mobile is built on top of the [Appcelerator Titanium Mobile Project](http:/
 
 All Mojo Mobile apps start with Mojo.Build. It will will invoke a model, view, and controller for each module namespace. 
 
-Modules are designed to use the [CommonJS](http://wiki.commonjs.org/wiki/Modules/1.1) style of "var exports" to export variables to the modules global scope. Doing this allows each separate component of the module to access them. The benefit of this, is it allows for each component in the name space to build dependencies at run time, and make them available for the other componets once all componets have been loaded.
+Modules are designed to use the [CommonJS](http://wiki.commonjs.org/wiki/Modules/1.1) style of "var exports" to export variables to the modules global scope. Doing this allows each separate component of the module to access them. The benefit here is that it allows for each component in the name space to build dependencies at run time and then share them with the other componets once all componets have been loaded.
 
 Here is a basic example of execution logic:
 
